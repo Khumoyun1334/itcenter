@@ -11,6 +11,8 @@ import Teachers from './pages/Teachers'
 import News from './pages/News'
 import Contact from './pages/Contact'
 import Admission from './pages/Admission'
+import OnlineDars from './pages/OnlineDars'
+
 
 function App() {
   return (
@@ -28,6 +30,7 @@ function App() {
           <Route path="/news" element={<News />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/admission" element={<Admission />} />
+             <Route path="/onlinedarslar" element={<OnlineDars />} />
         </Routes>
       </AnimatePresence>
       <Footer />
