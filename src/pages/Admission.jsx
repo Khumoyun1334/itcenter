@@ -303,7 +303,7 @@ ${formData.message || '-'}
             <div className="bg-gradient-to-br from-primary to-secondary rounded-2xl p-8 text-black bg-white shadow-2xl">
               <h3 className="text-2xl font-bold mb-4">Nima uchun IT Center?</h3>
               <ul className="space-y-3">
-                <li className="flex items-center gap-2">✓ Bepul ta'lim</li>
+                <li className="flex items-center gap-2">✓ Sifatli ta'lim</li>
                 <li className="flex items-center gap-2">✓ Zamonaviy jihozlar</li>
                 <li className="flex items-center gap-2">✓ Tajribali ustozlar</li>
                 <li className="flex items-center gap-2">✓ Sertifikat beriladi</li>
