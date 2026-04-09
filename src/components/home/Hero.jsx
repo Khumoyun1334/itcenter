@@ -7,7 +7,7 @@ import MyImage from "../../assets/itpark.jpg"
 
 const texts = [
   { title: "Rishton IT Center", subtitle: "Zamonaviy texnologiyalar markazi", desc: "2026-yil 1-apreldan boshlab faoliyat yuritadi" },
-  { title: "Bepul ta'lim", subtitle: "Barcha yoshlar uchun", desc: "Rishton tumanida yashovchi har bir yosh IT sohasini o'rganishi mumkin" },
+  { title: "Sifatli ta'lim", subtitle: "Barcha yoshlar uchun", desc: "Rishton tumanida yashovchi har bir yosh IT sohasini o'rganishi mumkin" },
   { title: "Zamonaviy jihozlar", subtitle: "Eng yangi kompyuterlar va uskunalar", desc: "50 dan ortiq kompyuterlar, robototexnika laboratoriyasi" },
   { title: "Sun'iy Intellekt", subtitle: "Kelajak kasbi", desc: "AI va Machine Learning yo'nalishlari" }
 ]

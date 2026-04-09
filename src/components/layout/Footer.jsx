@@ -13,7 +13,7 @@ export default function Footer() {
               </div>
               <h3 className="text-xl font-bold">Rishton IT Center</h3>
             </div>
-            <p className="text-gray-400 mb-4">Rishton tumanidagi bepul IT ta'lim markazi. Yoshlarni zamonaviy kasblarga o'rgatamiz.</p>
+            <p className="text-gray-400 mb-4">Rishton tumanidagi zamonaviy IT ta'lim markazi. Yoshlarni zamonaviy kasblarga o'rgatamiz.</p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition"><FaTelegram /></a>
               <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition"><FaInstagram /></a>
@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Rishton IT Center. Barcha huquqlar himoyalangan.</p>
+          <p>&copy; 2024 Rishton IT Center. Barcha huquqlar himoyalangan. Owner @khumoyun1535</p>
         </div>
       </div>
     </footer>

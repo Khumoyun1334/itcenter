@@ -38,7 +38,7 @@ export default function Navbar() {
           {/* LOGO */}
           <Link to="/" className="relative z-10">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center"></div>
+              <div className="w-10 h-10 bg-linear-to-r from-primary to-secondary rounded-lg flex items-center justify-center"></div>
               <div>
                 <h1 className="text-xl font-bold gradient-text">
                   Rishton IT Park
@@ -73,14 +73,14 @@ export default function Navbar() {
                   {isActive && (
                     <motion.div
                       layoutId="underline"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-primary to-secondary"
                     />
                   )}
 
                   {/* HOVER underline */}
                   {!isActive && (
                     <motion.div
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-primary to-secondary"
                       initial={{ width: 0 }}
                       whileHover={{ width: "100%" }}
                       transition={{ duration: 0.3 }}
@@ -93,7 +93,7 @@ export default function Navbar() {
             {/* BUTTON */}
             <Link
               to="/admission"
-              className="gradient-text px-5 py-2 bg-linear-to-r from-primary to-secondary text-white rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105"
+              className="gradient-text px-5 py-2 bg-linear-to-r from-primary to-secondary  rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105"
             >
               Ariza
             </Link>
@@ -103,7 +103,7 @@ export default function Navbar() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={`md:hidden text-2xl ${
-              scrolled ? "text-black" : "text-white"
+              scrolled ? "text-black" : "text-[#8b5cf6]"
             }`}
           >
             {isOpen ? <FaTimes /> : <FaBars />} 
@@ -141,7 +141,7 @@ export default function Navbar() {
 
               <Link
                 to="/admission"
-                className="py-2 px-4 bg-primary text-white rounded-lg text-center font-semibold hover:scale-105"
+                className="py-2 px-4 bg-primary border rounded-lg text-center font-semibold hover:scale-105"
               >
                 Ariza topshirish
               </Link>

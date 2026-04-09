@@ -5,8 +5,8 @@ const features = [
   {
     id: 1,
     icon: FaUserGraduate,
-    title: "Bepul ta'lim",
-    desc: "Davlat tomonidan to'liq qoplanadigan bepul ta'lim",
+    title: "Sifatli ta'lim",
+    desc: "Davlat standartlarga javob beradigon dars jaroyini",
     color: "from-blue-500 to-cyan-500"
   },
   {
@@ -75,7 +75,7 @@ export default function Features() {
               whileHover={{ y: -10 }}
               className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300"
             >
-              <div className={`w-16 h-16 mx-auto rounded-full bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 shadow-lg`}>
+              <div className={`w-16 h-16 mx-auto rounded-full bg-linear-to-r ${feature.color} flex items-center justify-center mb-4 shadow-lg`}>
                 <feature.icon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
