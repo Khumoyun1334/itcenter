@@ -68,6 +68,14 @@ export default function Admission() {
   const sendToTelegram = async () => {
     const directionName = directionsData.find(d => d.id === formData.direction)?.title || formData.direction
     
+    // Ma'lumotni o'zbekcha ko'rinishda yozish
+    const educationText = {
+      "school": "Maktab o'quvchisi",
+      "secondary": "O'rta ma'lumot",
+      "specialized": "O'rta maxsus",
+      "higher": "Oliy ma'lumot"
+    }[formData.education] || formData.education || '-'
+    
     const message = `
 📬 <b>YANGI ARIZA</b> (IT Center)
 ══════════════════
@@ -80,7 +88,7 @@ export default function Admission() {
 🎯 <b>TA'LIM HAQIDA:</b>
 • Yo'nalish: ${directionName}
 • Tug'ilgan sana: ${formData.birthDate || '-'}
-• Ma'lumot: ${formData.education || '-'}
+• Ma'lumot: ${educationText}
 
 📝 <b>QO'SHIMCHA:</b>
 ${formData.message || '-'}
@@ -251,9 +259,10 @@ ${formData.message || '-'}
                       className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary"
                     >
                       <option value="">Tanlang</option>
-                      <option>O'rta ma'lumot</option>
-                      <option>O'rta maxsus</option>
-                      <option>Oliy ma'lumot</option>
+                      <option value="school">🏫 Maktab o'quvchisi</option>
+                      <option value="secondary">📚 O'rta ma'lumot</option>
+                      <option value="specialized">🎓 O'rta maxsus</option>
+                      <option value="higher">🎓 Oliy ma'lumot</option>
                     </select>
                   </div>
                 </div>
@@ -274,7 +283,7 @@ ${formData.message || '-'}
               <button 
                 type="submit" 
                 disabled={loading}
-                className="w-full mt-8 py-4 bg-gradient-to-r from-primary to-secondary text-black border font-bold rounded-xl hover:shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full mt-8 py-4 bg-gradient-to-r from-primary to-secondary border font-bold rounded-xl hover:shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? (
                   <>
@@ -291,7 +300,7 @@ ${formData.message || '-'}
           </motion.div>
 
           <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }}>
-            <div className="bg-linear-to-br from-primary to-secondary rounded-2xl p-8 bg-white">
+            <div className="bg-gradient-to-br from-primary to-secondary rounded-2xl p-8 text-black bg-white shadow-2xl">
               <h3 className="text-2xl font-bold mb-4">Nima uchun IT Center?</h3>
               <ul className="space-y-3">
                 <li className="flex items-center gap-2">✓ Bepul ta'lim</li>
