@@ -3,13 +3,13 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Link } from "react-router-dom"
 import { FiArrowRight, FiPlay } from "react-icons/fi"
 
-import MyImage from "../../assets/itpark.jpg"
+import MyImage from "../../assets/husanboy.jpg"
 
 const texts = [
   { title: "Rishton IT Center", subtitle: "Zamonaviy texnologiyalar markazi", desc: "2026-yil 1-apreldan boshlab faoliyat yuritadi" },
   { title: "Sifatli ta'lim", subtitle: "Barcha yoshlar uchun", desc: "Rishton tumanida yashovchi har bir yosh IT sohasini o'rganishi mumkin" },
   { title: "Zamonaviy jihozlar", subtitle: "Eng yangi kompyuterlar va uskunalar", desc: "50 dan ortiq kompyuterlar, robototexnika laboratoriyasi" },
-  { title: "Sun'iy Intellekt", subtitle: "Kelajak kasbi", desc: "AI va Machine Learning yo'nalishlari" }
+  // { title: "Sun'iy Intellekt", subtitle: "Kelajak kasbi", desc: "AI va Machine Learning yo'nalishlari" }
 ]
 
 export default function Hero() {
@@ -78,11 +78,11 @@ export default function Hero() {
             >
               <Link 
                 to="/admission" 
-                className="px-8 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-lg font-semibold hover:shadow-lg transition-all flex items-center gap-2"
+                className="px-8 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-lg font-semibold hover:shadow-lg hover:border-[#10B981] transition-all flex items-center gap-2 hover:text-[#10B981]"
               >
                 Ariza topshirish <FiArrowRight />
               </Link>
-              <button className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-black transition-all flex items-center gap-2">
+              <button className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-[#10B981] hover:text-white transition-all flex items-center gap-2">
                 <FiPlay /> Video taqdimot
               </button>
             </motion.div>

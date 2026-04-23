@@ -92,7 +92,7 @@ export default function Blog() {
         <div className="text-center mt-10">
           <Link 
             to="/blog" 
-            className="inline-block px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-all"
+            className="inline-block px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-[#10B981] transition-all"
           >
             Barcha maqolalar
           </Link>

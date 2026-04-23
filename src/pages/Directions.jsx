@@ -18,7 +18,7 @@ export default function Directions() {
               <div className="relative h-64 overflow-hidden">
                 <img src={direction.image} alt={direction.title} className="w-full h-full object-cover" />
                 <div className={`absolute top-4 left-4 w-14 h-14 rounded-xl bg-gradient-to-r ${direction.bgGradient} flex items-center justify-center`}>
-                  <direction.icon className="w-8 h-8 text-white" />
+                  <direction.icon className="w-8 h-8 text-black" />
                 </div>
               </div>
               <div className="p-8">

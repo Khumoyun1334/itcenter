@@ -43,8 +43,8 @@ export default function Navbar() {
                 <h1 className="text-xl font-bold gradient-text">
                   Rishton IT Park
                 </h1>
-                <p className="text-xs text-gray-500">
-                  Bepul ta'lim markazi
+                <p className="gradient-text font-bold text-xs text-gray-500">
+                  Sifatli ta'lim markazi
                 </p>
               </div>
             </div>

@@ -283,7 +283,7 @@ ${formData.message || '-'}
               <button 
                 type="submit" 
                 disabled={loading}
-                className="w-full mt-8 py-4 bg-gradient-to-r from-primary to-secondary border font-bold rounded-xl hover:shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full mt-8 py-4 bg-gradient-to-r from-primary to-secondary border font-bold rounded-xl hover:shadow-lg transition-all flex items-center justify-center gap-2 hover:text-[#10B981] disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? (
                   <>

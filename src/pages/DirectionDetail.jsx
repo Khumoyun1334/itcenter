@@ -23,7 +23,7 @@ export default function DirectionDetail() {
             <img src={direction.image} alt={direction.title} className="rounded-2xl shadow-xl w-full" />
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }}>
-            <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${direction.bgGradient} mb-4`}>
+            <div className={`inline-flex p-3 rounded-xl bg-linear-to-r ${direction.bgGradient} mb-4`}>
               <direction.icon className="w-8 h-8 text-white" />
             </div>
             <h1 className="text-4xl font-bold mb-4">{direction.title}</h1>
@@ -47,7 +47,7 @@ export default function DirectionDetail() {
               <p className="text-gray-600">{direction.requirements || "Kompyuter savodxonligi va mantiqiy fikrlash"}</p>
             </div>
 
-            <Link to="/admission" className="inline-block w-full text-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-xl font-semibold hover:shadow-lg transition-all">
+            <Link to="/admission" className="inline-block w-full text-center px-8 py-4 bg-linear-to-r from-primary to-secondary text-black border rounded-xl font-semibold hover:shadow-lg transition-all">
               Arizani topshirish
             </Link>
           </motion.div>
