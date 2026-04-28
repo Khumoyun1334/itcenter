@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import { FaTelegram, FaInstagram, FaFacebook, FaYoutube, FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa"
 
+
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
@@ -9,9 +11,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
-                <span className="font-bold text-xl">IT</span>
+              
               </div>
-              <h3 className="text-xl font-bold">Rishton IT Center</h3>
+              <h3 className="text-xl font-bold">Rishton IT Park</h3>
             </div>
             <p className="text-gray-400 mb-4">Rishton tumanidagi zamonaviy IT ta'lim markazi. Yoshlarni zamonaviy kasblarga o'rgatamiz.</p>
             <div className="flex gap-4">

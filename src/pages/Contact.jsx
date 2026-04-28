@@ -64,14 +64,14 @@ export default function Contact() {
                   <FaMapMarkerAlt className="text-2xl text-primary" />
                   <div>
                     <p className="font-semibold text-gray-800">Manzil</p>
-                    <p className="text-gray-600">Rishton tumani, Markaziy ko'cha 45</p>
-                  </div>
+                    <p className="text-gray-600">Rishton tumani, 1-son texnikum ( eski sanoat kolejji ) hududida</p>
+                  </div> 
                 </div>
                 <div className="flex items-center gap-4">
                   <FaPhone className="text-2xl text-primary" />
                   <div>
                     <p className="font-semibold text-gray-800">Telefon</p>
-                    <p className="text-gray-600">+998 90 123 45 67</p>
+                    <p className="text-gray-600">+998 55 812 70 00</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">

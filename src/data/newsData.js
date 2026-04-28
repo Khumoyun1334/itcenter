@@ -17,8 +17,8 @@ export const newsData = [
   },
   {
     id: 3,
-    title: "Hackathon 2024 musobaqasi",
-    date: "2024-08-20",
+    title: "Hackathon 2026 musobaqasi",
+    date: "2026-08-20",
     category: "Musobaqa",
     image: "https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=600",
     excerpt: "IT Centerda birinchi Hackathon musobaqasi bo'lib o'tadi."

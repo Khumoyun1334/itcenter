@@ -6,7 +6,7 @@ export default function AboutCenter() {
     <div className="max-w-7xl mx-auto px-4">
       <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-4">Markaz haqida</h1>
-        <p className="text-gray-600 text-lg max-w-3xl mx-auto">Rishton IT Center - yoshlarni zamonaviy IT kasblarga tayyorlaydigan bepul ta'lim markazi</p>
+        <p className="text-gray-600 text-lg max-w-3xl mx-auto">Rishton IT park - yoshlarni zamonaviy IT kasblarga tayyorlaydigan Sifatli ta'lim markazi</p>
       </motion.div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
@@ -14,7 +14,7 @@ export default function AboutCenter() {
           <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800" alt="About" className="rounded-2xl shadow-xl" />
         </motion.div>
         <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }}>
-          <h2 className="text-3xl font-bold mb-4">Rishton IT Center</h2>
+          <h2 className="text-3xl font-bold mb-4">Rishton IT Park</h2>
           <p className="text-gray-600 mb-4">Rishton tumani hokimi tashabbusi bilan tashkil etilgan IT markaz yoshlarga zamonaviy IT sohalarida bepul ta'lim beradi.</p>
           <p className="text-gray-600 mb-6">Markazda 4 ta asosiy yo'nalish mavjud: Frontend, Backend, Robototexnika va Sun'iy Intellekt. Kelajakda yangi yo'nalishlar ham qo'shiladi.</p>
           <div className="grid grid-cols-2 gap-4">

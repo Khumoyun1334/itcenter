@@ -3,6 +3,8 @@ import { Link, useLocation } from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import { FaBars, FaTimes } from "react-icons/fa"
 
+import  logo2  from "../../assets/itparklogo.png"
+
 const navLinks = [
   { path: "/", label: "Bosh sahifa" },
   { path: "/about", label: "Markaz haqida" },
@@ -37,9 +39,11 @@ export default function Navbar() {
 
           {/* LOGO */}
           <Link to="/" className="relative z-10">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-linear-to-r from-primary to-secondary rounded-lg flex items-center justify-center"></div>
+            <div className="flex items-center gap-3">
+                  <img width={"40px"} src={logo2} alt="" />
+              {/* <div className="w-10 h-10 bg-linear-to-r from-primary to-secondary rounded-lg flex items-center justify-center"></div> */}
               <div>
+            
                 <h1 className="text-xl font-bold gradient-text">
                   Rishton IT Park
                 </h1>
