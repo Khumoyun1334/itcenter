@@ -6,17 +6,17 @@ const faqs = [
   {
     id: 1,
     question: "IT Center ga kimlar qatnasha oladi?",
-    answer: "Rishton tumanida yashovchi 16 yoshdan 35 yoshgacha bo'lgan barcha yoshlar bepul qatnasha oladi."
+    answer: "Rishton tumanida yashovchi 10 yoshdan 35 yoshgacha bo'lgan barcha yoshlar bepul qatnasha oladi."
   },
   {
     id: 2,
     question: "Qanday qilib ariza topshirish mumkin?",
-    answer: "Saytimizdagi 'Ariza topshirish' sahifasida formani to'ldirishingiz yoki IT Center ga to'g'ridan-to'g'ri kelib murojaat qilishingiz mumkin."
+    answer: "Saytimizdagi 'Ariza topshirish' sahifasida formani to'ldirishingiz yoki IT Park ga to'g'ridan-to'g'ri kelib murojaat qilishingiz mumkin."
   },
   {
     id: 3,
     question: "Darslar qancha davom etadi?",
-    answer: "Yo'nalishga qarab 3 oydan 6 oygacha davom etadi. Har hafta 3-4 kun darslar tashkil etiladi."
+    answer: "Yo'nalishga qarab 1 oydan 6 oygacha davom etadi. Har hafta 3 kun darslar tashkil etiladi."
   },
   {
     id: 4,

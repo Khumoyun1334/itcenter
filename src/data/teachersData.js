@@ -13,13 +13,13 @@ import said from "../assets/said.jpg";
 export const teachersData = [
   {
     id: 1,
-    name: "Humoyun Baxromov",
+    name: "Humoyunmirzo Baxromov",
     position: "Frontend Instructor",
     experience: "2+ yil",
     direction: "Frontend Dasturlash",
     image: humoyun,
     bio: "React.js va modern frontend texnologiyalar bo'yicha mutaxassis. 10 dan ortiq loyihalar muallifi.",
-    social: { telegram: "@shavkat_akramov", github: "shavkatdev", linkedin: "shavkat-akramov" }
+    social: { telegram: "https://t.me/khumoyun_1535", github: "shavkatdev", linkedin: "shavkat-akramov" }
   },
   {
     id: 2,

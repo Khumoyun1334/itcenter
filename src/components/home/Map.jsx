@@ -14,7 +14,7 @@ export default function Map() {
           <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
             Bizni qayerdan topasiz?
           </h2>
-          <p className="text-gray-600">Rishton tumani, Markaziy ko'cha 45</p>
+          <p className="text-gray-600">Rishton tumani 1-son texnikumi ( Eski sanoat kolejji ) hududida</p>
         </motion.div>
 
         <motion.div
@@ -24,16 +24,17 @@ export default function Map() {
           className="rounded-2xl overflow-hidden shadow-2xl"
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24256.57825559171!2d71.28214575!3d40.3575223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb0f6b4d8e4e9b%3A0x8e5e8e5e8e5e8e5e!2sRishton%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1813.8151362832436!2d71.28095012819544!3d40.349267157611635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bbaa25c3127873%3A0xa5ffcab5527e1367!2z0KDQuNGI0YLQvtC9INCh0LDQvdC-0LDRgiDQutC-0LvQu9C10LTQttC4!5e0!3m2!1sru!2s!4v1777462194587!5m2!1sru!2s"
             width="100%"
             height="400"
             style={{ border: 0 }}
-            allowFullScreen
+            allowFullScreen   
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             title="Rishton IT Center Location"
             className="w-full"
           ></iframe>
+          
         </motion.div>
       </div>
     </section>

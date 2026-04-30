@@ -10,8 +10,9 @@ const navLinks = [
   { path: "/about", label: "Markaz haqida" },
   { path: "/directions", label: "Yo'nalishlar" },
   { path: "/teachers", label: "Ustozlar" },
-  { path: "/onlinedarslar", label: "Online Dars" },  // YANGI
-  { path: "/news", label: "Yangiliklar" },
+  { path: "/onlinedarslar", label: "Online Dars" }, 
+  //  { path: "/video-presentation", label: "Video" }, // YANGI
+  { path: "/news", label: "Yangiliklar" },  
   { path: "/contact", label: "Bog'lanish" },
 ]
 
@@ -107,7 +108,7 @@ export default function Navbar() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={`md:hidden text-2xl ${
-              scrolled ? "text-black" : "text-[#8b5cf6]"
+              scrolled ? "text-black" : "text-[#10B981]"
             }`}
           >
             {isOpen ? <FaTimes /> : <FaBars />} 
@@ -122,7 +123,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white shadow-lg"
+            className="md:hidden bg-white/90 backdrop-blur-2xl shadow-lg"
           >
             <div className="flex flex-col p-4 gap-2">
               {navLinks.map((link) => {

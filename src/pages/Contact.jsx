@@ -94,20 +94,20 @@ export default function Contact() {
                 <h3 className="font-semibold mb-4 text-gray-800">Ijtimoiy tarmoqlar</h3>
                 <div className="flex gap-4">
                   <a 
-                    href="#" 
-                    className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group"
+                    href="https://t.me/itparkrishton_uz" 
+                    className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white hover:bg-[#10B981] transition-all duration-300 group"
                   >
                     <FaTelegram size={24} className="text-primary group-hover:text-white" />
                   </a>
                   <a 
-                    href="#" 
-                    className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group"
+                    href="https://www.instagram.com/itpark_rishtan/" 
+                    className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:bg-[#10B981] hover:text-white transition-all duration-300 group"
                   >
                     <FaInstagram size={24} className="text-primary group-hover:text-white" />
                   </a>
                   <a 
                     href="#" 
-                    className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group"
+                    className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:bg-[#10B981] hover:text-white transition-all duration-300 group"
                   >
                     <FaFacebook size={24} className="text-primary group-hover:text-white" />
                   </a>

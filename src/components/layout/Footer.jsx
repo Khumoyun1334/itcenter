@@ -50,15 +50,15 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Bog'lanish</h4>
             <ul className="space-y-3 text-gray-400">
-              <li className="flex items-center gap-3"><FaMapMarkerAlt className="text-primary" /> Rishton tumani, Markaziy ko'cha 45</li>
-              <li className="flex items-center gap-3"><FaPhone className="text-primary" /> +998 90 123 45 67</li>
+              <li className="flex items-center gap-3"><FaMapMarkerAlt className="text-primary" /> Rishton tumani 1-son texnikumi ( Eski sanoat koleji ) hududida</li>
+              <li className="flex items-center gap-3"><FaPhone className="text-primary" /> +998 55 812 70 00</li>
               <li className="flex items-center gap-3"><FaEnvelope className="text-primary" /> info@rishtonit.uz</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Rishton IT Center. Barcha huquqlar himoyalangan. Owner @khumoyun1535</p>
+          <p>&copy; 2026 Rishton IT Center. Barcha huquqlar himoyalangan. Owner @khumoyun1535</p>
         </div>
       </div>
     </footer>

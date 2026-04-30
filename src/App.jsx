@@ -12,11 +12,12 @@ import News from './pages/News'
 import Contact from './pages/Contact'
 import Admission from './pages/Admission'
 import OnlineDars from './pages/OnlineDars'
+import VideoPresentation from './pages/VideoPresentation'
 
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100">
 
       <Navbar />
       <ScrollToTop />
@@ -30,6 +31,7 @@ function App() {
           <Route path="/news" element={<News />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/admission" element={<Admission />} />
+          <Route path="/video-presentation" element={<VideoPresentation />} />
              <Route path="/onlinedarslar" element={<OnlineDars />} />
         </Routes>
       </AnimatePresence>
