@@ -1,29 +1,33 @@
-import Hero from '../components/home/Hero'
-import Features from '../components/home/Features'
-import Directions from '../components/home/Directions'
-import Statistics from '../components/home/Statistics'
-import Teachers from '../components/home/Teachers'
-import Testimonials from '../components/home/Testimonials'
-import Blog from '../components/home/Blog'
-import Partners from '../components/home/Partners'
-import FAQ from '../components/home/FAQ'
-import Map from '../components/home/Map'
-import News from '../components/home/News'
+import Hero from "../components/home/Hero"
+import Statistics from "../components/home/Statistics"
+import AboutPreview from "../components/home/AboutPreview"
+import Directions from "../components/home/Directions"
+import Features from "../components/home/Features"
+import Countdown from "../components/home/Countdown"
+import Teachers from "../components/home/Teachers"
+import Testimonials from "../components/home/Testimonials"
+import Partners from "../components/home/Partners"
+import News from "../components/home/News"
+import FAQ from "../components/home/FAQ"
+import Map from "../components/home/Map"
+import CTASection from "../components/common/CTASection"
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Features />
-      <Directions />
       <Statistics />
+      <AboutPreview />
+      <Directions />
+      <Features />
+      <Countdown />
       <Teachers />
       <Testimonials />
-      <Blog />
       <Partners />
+      <News />
       <FAQ />
       <Map />
-      <News />
+      <CTASection />
     </main>
   )
 }

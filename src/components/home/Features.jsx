@@ -1,89 +1,72 @@
-import { motion } from "framer-motion"
-import { FaLaptopCode, FaUserGraduate, FaBriefcase, FaCertificate, FaClock, FaGlobe } from "react-icons/fa"
-
-const features = [
-  {
-    id: 1,
-    icon: FaUserGraduate,
-    title: "Sifatli ta'lim",
-    desc: "Davlat standartlarga javob beradigon dars jaroyini",
-    color: "from-blue-500 to-cyan-500"
-  },
-  {
-    id: 2,
-    icon: FaLaptopCode,
-    title: "Zamonaviy jihozlar",
-    desc: "Eng yangi kompyuterlar va texnologiyalar",
-    color: "from-green-500 to-emerald-500"
-  },
-  {
-    id: 3,
-    icon: FaBriefcase,
-    title: "Ishga joylashtirish",
-    desc: "Kursni tamomlagandan so'ng ishga joylashtirish",
-    color: "from-red-500 to-orange-500"
-  },
-  {
-    id: 4,
-    icon: FaCertificate,
-    title: "Sertifikat",
-    desc: "Davlat tomonidan tan olingan sertifikat",
-    color: "from-purple-500 to-pink-500"
-  },
-  {
-    id: 5,
-    icon: FaClock,
-    title: "Qulay vaqt",
-    desc: "Kechki va dam olish kunlari darslar",
-    color: "from-yellow-500 to-orange-500"
-  },
-  {
-    id: 6,
-    icon: FaGlobe,
-    title: "Xalqaro standart",
-    desc: "Xalqaro dasturlash standartlari asosida",
-    color: "from-indigo-500 to-purple-500"
-  }
-]
+import { motion, useReducedMotion } from "framer-motion"
+import { FiAward, FiBriefcase, FiClock, FiCpu, FiGlobe, FiUserCheck } from "react-icons/fi"
+import { useLanguage } from "../../context/LanguageContext"
+import SectionHeader from "../common/SectionHeader"
 
 export default function Features() {
-  return (
-    <section className="py-20 px-4 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
-            Nima uchun aynan biz?
-          </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Rishton IT Center ni tanlashning 6ta asosiy sababi
-          </p>
-        </motion.div>
+  const reduceMotion = useReducedMotion()
+  const { t } = useLanguage()
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              whileHover={{ y: -10 }}
-              className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300"
-            >
-              <div className={`w-16 h-16 mx-auto rounded-full bg-linear-to-r ${feature.color} flex items-center justify-center mb-4 shadow-lg`}>
-                <feature.icon className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.desc}</p>
-            </motion.div>
-          ))}
+  const features = [
+    { icon: FiUserCheck, title: t("features.f1_title"), description: t("features.f1_desc") },
+    { icon: FiCpu, title: t("features.f2_title"), description: t("features.f2_desc") },
+    { icon: FiBriefcase, title: t("features.f3_title"), description: t("features.f3_desc") },
+    { icon: FiAward, title: t("features.f4_title"), description: t("features.f4_desc") },
+    { icon: FiClock, title: t("features.f5_title"), description: t("features.f5_desc") },
+    { icon: FiGlobe, title: t("features.f6_title"), description: t("features.f6_desc") }
+  ]
+
+  return (
+    <section id="features" className="section-space relative overflow-hidden bg-[#eaf3ed]/60">
+      <div className="dot-surface absolute -right-20 top-0 h-96 w-96 opacity-40" />
+      <div className="site-container relative">
+        <SectionHeader
+          eyebrow={t("features.eyebrow")}
+          title={t("features.title")}
+          description={t("features.description")}
+        />
+
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature, index) => {
+            const Icon = feature.icon
+            const isFirst = index === 0
+            return (
+              <motion.article
+                key={feature.title}
+                initial={reduceMotion ? false : { opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: reduceMotion ? 0 : index * 0.07 }}
+                whileHover={{ y: -6 }}
+                className={[
+                  "relative overflow-hidden rounded-[1.8rem] border p-7 transition-all duration-300",
+                  isFirst
+                    ? "border-[#072418] bg-gradient-to-br from-[#061811] via-[#09261b] to-[#0c3324] text-white shadow-[0_22px_60px_rgba(7,21,15,0.3)]"
+                    : "border-line/90 bg-white/95 text-ink shadow-[0_12px_36px_rgba(7,21,15,0.05)] hover:border-emerald-500/40 hover:shadow-[0_20px_50px_rgba(12,166,108,0.12)]"
+                ].join(" ")}
+              >
+                <div className="flex items-center justify-between">
+                  <div className={["flex h-14 w-14 items-center justify-center rounded-2xl shadow-sm", isFirst ? "bg-emerald-400 text-[#05110c]" : "bg-[#e9f8f0] text-primary"].join(" ")}>
+                    <Icon className="h-6 w-6" aria-hidden="true" />
+                  </div>
+                  <span className={["font-display text-lg font-bold", isFirst ? "text-emerald-300/60" : "text-emerald-900/30"].join(" ")}>
+                    0{index + 1}
+                  </span>
+                </div>
+
+                <h3 className="font-display mt-6 text-xl font-bold tracking-tight">
+                  {feature.title}
+                </h3>
+
+                <p className={["mt-2.5 text-sm leading-relaxed", isFirst ? "text-white/70" : "text-muted"].join(" ")}>
+                  {feature.description}
+                </p>
+              </motion.article>
+            )
+          })}
         </div>
       </div>
     </section>
   )
 }
+

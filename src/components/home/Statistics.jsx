@@ -1,118 +1,75 @@
-import { useEffect, useState } from "react"
-import { motion } from "framer-motion"
-import { FaUsers, FaLaptopCode, FaRobot, FaBrain } from "react-icons/fa"
-
-const stats = [
-  { id: 1, icon: FaUsers, value: 500, label: "Talabalar", suffix: "+", color: "from-blue-500 to-cyan-500" },
-  { id: 2, icon: FaLaptopCode, value: 6, label: "Yo'nalishlar", suffix: "", color: "from-green-500 to-emerald-500" },
-  { id: 3, icon: FaRobot, value: 50, label: "Jihozlar", suffix: "+", color: "from-red-500 to-orange-500" },
-  { id: 4, icon: FaBrain, value: 12, label: "Mutaxassislar", suffix: "", color: "from-purple-500 to-pink-500" }
-]
+import { useEffect, useRef, useState } from "react"
+import { motion, useInView, useReducedMotion } from "framer-motion"
+import { FiCpu, FiLayers, FiUsers, FiAward } from "react-icons/fi"
+import { useLanguage } from "../../context/LanguageContext"
 
 function Counter({ value, suffix }) {
+  const ref = useRef(null)
+  const inView = useInView(ref, { once: true, amount: 0.5 })
+  const reduceMotion = useReducedMotion()
   const [count, setCount] = useState(0)
-  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true)
-          observer.disconnect()
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    const element = document.getElementById(`counter-${value}`)
-    if (element) {
-      observer.observe(element)
-    }
-
-    return () => observer.disconnect()
-  }, [value])
-
-  useEffect(() => {
-    if (isVisible) {
-      let start = 0
-      const increment = Math.ceil(value / 40)
-      const timer = setInterval(() => {
-        start += increment
-        if (start >= value) {
-          setCount(value)
-          clearInterval(timer)
-        } else {
-          setCount(start)
-        }
-      }, 30)
-      return () => clearInterval(timer)
-    }
-  }, [isVisible, value])
+    if (!inView || reduceMotion) return undefined
+    let frame = 0
+    const totalFrames = 36
+    const timer = window.setInterval(() => {
+      frame += 1
+      setCount(Math.round((value * frame) / totalFrames))
+      if (frame >= totalFrames) window.clearInterval(timer)
+    }, 25)
+    return () => window.clearInterval(timer)
+  }, [inView, reduceMotion, value])
 
   return (
-    <motion.span 
-      id={`counter-${value}`} 
-      className="text-4xl md:text-5xl font-bold text-white"
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ 
-        duration: 0.5,
-        type: "spring",
-        stiffness: 100,
-        damping: 10
-      }}
-    >
-      {count}{suffix}
-    </motion.span>
+    <strong ref={ref} className="font-display block text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
+      {reduceMotion && inView ? value : count}{suffix}
+    </strong>
   )
 }
 
 export default function Statistics() {
-  return (
-    <section className="py-16 px-4 bg-gradient-to-br bg-gray-900">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
-            Raqamlar bilan
-          </h2>
-          <p className="text-blue-100">Bizning natijalarimiz</p>
-        </motion.div>
+  const { t } = useLanguage()
 
-        {/* Stats grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {stats.map((stat, index) => (
-            <motion.div
-              key={stat.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5 }}
-              className="text-center"
-            >
-              {/* Icon */}
-              <motion.div 
-                className={`w-16 h-16 mx-auto rounded-full bg-gradient-to-r ${stat.color} flex items-center justify-center mb-3 shadow-lg`}
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                transition={{ duration: 0.3 }}
+  const stats = [
+    { icon: FiUsers, value: 500, label: t("stats.students"), suffix: "+", badge: "500+" },
+    { icon: FiLayers, value: 6, label: t("stats.courses"), suffix: "", badge: "6 Tracks" },
+    { icon: FiCpu, value: 100, label: t("stats.free"), suffix: "%", badge: "100% Free" },
+    { icon: FiAward, value: 92, label: t("stats.employment"), suffix: "%", badge: "92%" }
+  ]
+
+  return (
+    <section id="statistics" aria-label="Markaz statistikasi" className="relative z-10 -mt-10 pb-10 sm:-mt-14">
+      <div className="site-container">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {stats.map((stat, index) => {
+            const Icon = stat.icon
+            return (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08, duration: 0.5 }}
+                whileHover={{ y: -5 }}
+                className="group relative overflow-hidden rounded-3xl border border-line/90 bg-white/95 p-6 shadow-[0_15px_40px_rgba(7,21,15,0.06)] backdrop-blur-xl transition-all duration-300 hover:border-emerald-500/40 hover:shadow-[0_20px_50px_rgba(12,166,108,0.12)]"
               >
-                <stat.icon className="w-8 h-8 text-white" />
+                <div className="flex items-center justify-between">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-tr from-emerald-100 to-emerald-50 text-primary transition-transform duration-300 group-hover:scale-110">
+                    <Icon className="h-6 w-6" aria-hidden="true" />
+                  </span>
+                  <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-[11px] font-bold text-emerald-800 border border-emerald-200">
+                    {stat.badge}
+                  </span>
+                </div>
+
+                <div className="mt-5">
+                  <Counter value={stat.value} suffix={stat.suffix} />
+                  <p className="mt-1 text-xs font-bold text-muted sm:text-sm">{stat.label}</p>
+                </div>
               </motion.div>
-              
-              {/* Counter */}
-              <Counter value={stat.value} suffix={stat.suffix} />
-              
-              {/* Label */}
-              <p className="text-blue-100 text-sm mt-1">{stat.label}</p>
-            </motion.div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

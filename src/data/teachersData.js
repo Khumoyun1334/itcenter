@@ -1,54 +1,63 @@
-import humoyun from "../assets/humoyun.jpg";
-
-import boburaka from "../assets/boburaka.jpg";
-
-import asroraka from "../assets/asroraka.jpg";
-import said from "../assets/said.jpg";
-
-
-
-
-
+import humoyun from "../assets/humoyun.jpg"
+import boburaka from "../assets/boburaka.jpg"
+import asroraka from "../assets/asroraka.jpg"
+import said from "../assets/said.jpg"
+import husanboy from "../assets/husanboy.jpg"
 
 export const teachersData = [
   {
     id: 1,
     name: "Humoyunmirzo Baxromov",
-    position: "Frontend Instructor",
-    experience: "2+ yil",
+    position: "Frontend Instructor & Lead",
+    experience: "3+ yil",
     direction: "Frontend Dasturlash",
     image: humoyun,
-    bio: "React.js va modern frontend texnologiyalar bo'yicha mutaxassis. 10 dan ortiq loyihalar muallifi.",
-    social: { telegram: "https://t.me/khumoyun_1535", github: "shavkatdev", linkedin: "shavkat-akramov" }
+    bio: "React.js, Next.js va modern frontend arxitekturasi bo'yicha mutaxassis. 15+ dan ortiq real tijoriy loyihalar muallifi.",
+    skills: ["React", "JavaScript", "Tailwind CSS", "TypeScript", "Redux Toolkit"],
+    social: { telegram: "https://t.me/khumoyun_1535", github: "https://github.com", linkedin: "https://linkedin.com" }
   },
   {
     id: 2,
     name: "Maxammadjonov Muxammadbobur",
-    position: "Full Stack Instructor",
+    position: "Full Stack Senior Instructor",
     experience: "9+ yil",
     direction: "Full Stack Dasturlash",
     image: boburaka,
-    bio: "Node.js va Python bo'yicha katta tajribaga ega. Bir qancha yirik loyihalar backend arxitektori.",
-    social: { telegram: "@jasur_rahimov", github: "jasurdev", linkedin: "jasur-rahimov" }
+    bio: "Node.js, Python, Django va murakkab backend ma'lumotlar bazasi arxitekturasida yirik tajribaga ega amaliyotchi dasturchi.",
+    skills: ["Node.js", "Python", "Django", "PostgreSQL", "Docker", "REST API"],
+    social: { telegram: "https://t.me/itparkrishton_uz", github: "https://github.com", linkedin: "https://linkedin.com" }
   },
   {
     id: 3,
     name: "Asrorbek Muqimjonov",
-    position: "Kiberxavfsizlik",
+    position: "Kiberxavfsizlik Mutaxassisi",
     experience: "6+ yil",
-    direction: "Kiberxavfsizlik ",
+    direction: "Kiberxavfsizlik",
     image: asroraka,
-    bio: "Kiberxavfsizlik bo‘yicha mutaxassis. Axborot xavfsizligi va tarmoq himoyasi sohasida tajribaga ega. Respublika va xalqaro IT tanlovlari ishtirokchisi va sovrindori.",
-    social: { telegram: "@alisher_robotech", github: "alisherrobotics", linkedin: "alisher-tukhtayev" }
+    bio: "Axborot xavfsizligi, tarmoqlar himoyasi va penetration testing bo‘yicha tajribali mutaxassis. Respublika IT tanlovlari sovrindori.",
+    skills: ["Kali Linux", "Network Security", "Penetration Testing", "Cryptography", "SIEM"],
+    social: { telegram: "https://t.me/itparkrishton_uz", github: "https://github.com", linkedin: "https://linkedin.com" }
   },
   {
     id: 4,
     name: "Saidbek Olimjonovich",
-    position: "AI & ML Specialist",
+    position: "AI & Data Science Specialist",
     experience: "4+ yil",
     direction: "Sun'iy Intellekt",
     image: said,
-    bio: "Machine Learning va Computer Vision bo'yicha mutaxassis. Bir qancha xalqaro sertifikatlar sohibi.",
-    social: { telegram: "@gulnora_ai", github: "gulnoraai", linkedin: "gulnora-khasanova" }
+    bio: "Machine Learning, Deep Learning va Computer Vision bo'yicha xalqaro sertifikatlar sohibi va ilmiy tadqiqotchi.",
+    skills: ["Python", "TensorFlow", "PyTorch", "Computer Vision", "NLP"],
+    social: { telegram: "https://t.me/itparkrishton_uz", github: "https://github.com", linkedin: "https://linkedin.com" }
+  },
+  {
+    id: 5,
+    name: "Husanboy Rustamov",
+    position: "Grafik & UI/UX Dizayner",
+    experience: "3+ yil",
+    direction: "Grafik Dizayn",
+    image: husanboy,
+    bio: "Brending, tipografika va zamonaviy mobil hamda veb-ilovalarning UI/UX dizaynini yaratish bo'yicha mutaxassis.",
+    skills: ["Figma", "Photoshop", "Illustrator", "UI/UX", "Brand Identity"],
+    social: { telegram: "https://t.me/itparkrishton_uz", github: "https://github.com", linkedin: "https://linkedin.com" }
   }
-]
+]
